@@ -2,7 +2,7 @@
 	"miniprogramRoot": "dist/",
 	"projectname": "taro-ts-redux-sass",
 	"description": "a project by taro",
-	"appid": "touristappid",
+	"appid": "wx7a7cf81b8736f72a",
 	"setting": {
 		"urlCheck": true,
 		"es6": false,

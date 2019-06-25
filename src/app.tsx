@@ -30,15 +30,16 @@ class App extends Component {
   config: Config = {
     pages: [
       'pages/index/index',
+      'pages/redux/index',
       'pages/my/index',
       'pages/orders/index',
       'pages/shoppingCar/index'
     ],
     window: {
       backgroundTextStyle: 'light',
-      navigationBarBackgroundColor: '#fff',
-      navigationBarTitleText: 'WeChat',
-      navigationBarTextStyle: 'black'
+      navigationBarBackgroundColor: '#fa7570',
+      navigationBarTitleText: 'Eiiizong',
+      navigationBarTextStyle: 'white'
     },
     tabBar: {
       color: '#dbdbdb',

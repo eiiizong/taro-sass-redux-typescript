@@ -1,0 +1,25 @@
+;
+@import '../node_modules/taro-ui/dist/style/components/button.scss';
+
+@import '../constants.scss';
+
+page,
+view,
+text,
+swiper,
+image,
+swiper-item {
+  box-sizing: border-box;
+}
+
+page {
+  width: 100%;
+  height: 100%;
+
+  >view {
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    background-color: $body-bgc;
+  }
+}
