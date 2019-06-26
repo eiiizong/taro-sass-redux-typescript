@@ -1,10 +1,7 @@
 import { ComponentClass } from 'react'
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View } from '@tarojs/components'
+import { View, Button } from '@tarojs/components'
 
-import { RequestAPI } from '../../utils/request'
-
-import ESwiper from '../../components/eSwiper'
 import './index.scss'
 
 type PageStateProps = {
@@ -40,29 +37,23 @@ class Index extends Component {
 
   componentWillUnmount() { }
 
-  componentDidShow() {
-    this.requestShopData()
-  }
+  componentDidShow() { }
 
   componentDidHide() { }
-  requestShopData() {
-    const url = "shops"
-    const data = {}
-    const header = {}
-    const method = "POST"
-    const success = data => {
-      console.log(data)
-    }
-    const fail = err => {
-      console.log(err)
-    }
 
-    RequestAPI(url, data, header, method, success, fail)
+  // 选择地址
+  choiceAddress() {
+    Taro.chooseLocation().then(res => console.log(res)).catch(err => console.log(err))
+  }
+  // 选择收货地址
+  choiceAddress2() {
+    Taro.chooseAddress().then(res => console.log(res)).catch(err => console.log(err))
   }
   render() {
     return (
-      <View className='index'>
-        <ESwiper />
+      <View className='address'>
+        <Button onClick={this.choiceAddress.bind(this)}>选择地址</Button>
+        <Button onClick={this.choiceAddress2.bind(this)}>选择收货地址</Button>
       </View>
     )
   }
