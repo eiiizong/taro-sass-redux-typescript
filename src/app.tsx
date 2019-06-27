@@ -29,10 +29,10 @@ class App extends Component {
    */
   config: Config = {
     pages: [
+      'pages/my/index',
       'pages/index/index',
       'pages/address/index',
       'pages/redux/index',
-      'pages/my/index',
       'pages/orders/index',
       'pages/webview/index',
       'pages/shoppingCar/index'

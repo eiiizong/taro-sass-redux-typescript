@@ -35,7 +35,11 @@ class ESwiper extends Component {
   componentDidShow() { }
 
   componentDidHide() { }
-
+  linkToWebview() {
+    Taro.navigateTo({
+      url: '../../pages/webview/index?url=https://www.yangfugui.com/ordering/news/4&name=haha'
+    })
+  }
   render() {
     return (
       <View className='e-swiper'>
@@ -60,12 +64,12 @@ class ESwiper extends Component {
           autoplay={true}>
           <SwiperItem>
             <View className='swiper-item'>
-              <Image src={BannerImg} className="img"></Image>
+              <Image src={BannerImg} className="img" onClick={this.linkToWebview}></Image>
             </View>
           </SwiperItem>
           <SwiperItem>
             <View className='swiper-item'>
-              <Image src={BannerImg} className="img"></Image>
+              <Image src={BannerImg} className="img" onClick={this.linkToWebview}></Image>
             </View>
           </SwiperItem>
         </Swiper>
